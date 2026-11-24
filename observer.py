@@ -38,6 +38,8 @@ def inspect(address):
         raise ValueError("No matching base-token pool")
     pair = max(pairs,key=lambda p:float((p.get("liquidity") or {}).get("usd") or 0))
     market = {"address":address,"symbol":pair["baseToken"].get("symbol"),"price_usd":pair.get("priceUsd"),"volume":pair.get("volume"),"price_change":pair.get("priceChange"),"liquidity_usd":(pair.get("liquidity") or {}).get("usd")}
+    if float(market["liquidity_usd"] or 0)<25000:
+        return {**market,"decision":"skip","eligible":False,"security_status":"not_checked","reason":"Liquidity missing or below threshold"}
     try:
         return {**market, **security(address,pair)}
     except Exception as exc:
