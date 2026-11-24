@@ -628,5 +628,177 @@
         "paper_order": false
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-24T22:48:52Z",
+    "status": "observed",
+    "summary": {
+      "observed": 5,
+      "rejected": 5,
+      "errors": 0,
+      "orders": 0
+    },
+    "observations": [
+      {
+        "address": "Ed24VXWVmRGpufeE5hJqE2engYgXrf239BiDrWbZpump",
+        "symbol": "CHARITY",
+        "price_usd": "0.000007292",
+        "volume": {
+          "h24": 78841.55,
+          "h6": 78841.55,
+          "h1": 78841.55,
+          "m5": 30679.31
+        },
+        "price_change": {
+          "m5": -49.46,
+          "h1": -20.31,
+          "h6": -20.31,
+          "h24": -20.31
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "not_checked",
+        "reason": "Liquidity missing or below threshold",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "ES7EGhS29PebFyTTf2PYdnJNPvcF9yzoSeZrMT5xpump",
+        "symbol": "goldinu",
+        "price_usd": "0.00004438",
+        "volume": {
+          "h24": 7.73,
+          "h6": 7.73,
+          "h1": 7.73,
+          "m5": 0.4
+        },
+        "price_change": {
+          "m5": -8.19,
+          "h1": 36.77,
+          "h6": 36.77,
+          "h24": 36.77
+        },
+        "liquidity_usd": 20.79,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "not_checked",
+        "reason": "Liquidity missing or below threshold",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "4WZpPscgpPbAbKNGc2RXmWTw6PWjg9NnCc3nGxuGpump",
+        "symbol": "tard",
+        "price_usd": "0.000002558",
+        "volume": {
+          "h24": 71935.2,
+          "h6": 71935.2,
+          "h1": 71935.2,
+          "m5": 617.11
+        },
+        "price_change": {
+          "m5": -5.1,
+          "h1": 19.74,
+          "h6": 19.74,
+          "h24": 19.74
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "not_checked",
+        "reason": "Liquidity missing or below threshold",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "54Y1hTxnbNha2kkHAC2LqHGXTiEMg3uNr1pYbMQ9pump",
+        "symbol": "SCOOBY",
+        "price_usd": "0.000008572",
+        "volume": {
+          "h24": 87185.95,
+          "h6": 87185.95,
+          "h1": 87185.95,
+          "m5": 4621.45
+        },
+        "price_change": {
+          "m5": 9.79,
+          "h1": 301,
+          "h6": 301,
+          "h24": 301
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "not_checked",
+        "reason": "Liquidity missing or below threshold",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "ANDLpP3C7tFXEpqRBmmnbS4usmQthHfs93N5oHGpump",
+        "symbol": "BOUNCER",
+        "price_usd": "0.00001759",
+        "volume": {
+          "h24": 49977.02,
+          "h6": 49977.02,
+          "h1": 18283.63,
+          "m5": 1465.57
+        },
+        "price_change": {
+          "m5": 23.56,
+          "h1": 25.39,
+          "h6": 357,
+          "h24": 357
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "not_checked",
+        "reason": "Liquidity missing or below threshold",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      }
+    ]
   }
 ]
