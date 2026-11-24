@@ -1,7 +1,7 @@
 {
-  "status": "provider_error",
-  "http_status": 403,
-  "operationId": "9dd5de75-9e94-4771-a5c9-243ab1396114",
+  "status": "no_hypotheses",
+  "source": "octopus",
+  "operationId": "f018e2b7-f84f-433c-b100-8e4a27ab5154",
   "hypotheses": [],
-  "source_timestamp": "2026-11-24T22:23:17Z"
+  "source_timestamp": "2026-11-24T22:27:23Z"
 }
