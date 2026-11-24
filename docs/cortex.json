@@ -1,7 +1,6 @@
 {
-  "status": "no_hypotheses",
-  "source": "octopus",
-  "operationId": "f018e2b7-f84f-433c-b100-8e4a27ab5154",
+  "status": "provider_error",
+  "error_type": "JSONDecodeError",
   "hypotheses": [],
-  "source_timestamp": "2026-11-24T22:27:23Z"
+  "source_timestamp": "2026-11-24T22:46:25Z"
 }
