@@ -1,6 +1,11 @@
 name: Observer snapshot
 on:
   workflow_dispatch:
+    inputs:
+      cortex:
+        description: 'Authorize one Mistral research request (API usage may incur costs)'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -22,12 +27,18 @@ jobs:
         run: python observer.py
       - name: Record decisions and history
         run: python memory.py
+      - name: Research hypotheses
+        if: inputs.cortex && steps.scan.outcome == 'success'
+        env:
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+        run: python octopus_adapter.py
       - name: Persist observation including errors
         run: |
           test -f docs/status.json
           git config user.name "Octopus Observer"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/status.json docs/history.json
+          if test -f docs/cortex.json; then git add docs/cortex.json; fi
           git diff --cached --quiet || git commit -m "Observer market snapshot"
           git push
       - name: Report failed collection
