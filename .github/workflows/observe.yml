@@ -43,7 +43,12 @@ jobs:
           git add docs/status.json docs/history.json
           if test -f docs/cortex.json; then git add docs/cortex.json; fi
           git diff --cached --quiet || git commit -m "Observer market snapshot"
-          git push
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase || exit 1
+            if git push; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
       - name: Report failed Cortex research
         if: inputs.cortex && steps.scan.outcome == 'success'
         run: python -c "import json; d=json.load(open('docs/cortex.json')); print(d['status']); assert d['status']=='proposed', d.get('http_status',d['status'])"
