@@ -30,7 +30,7 @@ jobs:
       - name: Research hypotheses
         if: inputs.cortex && steps.scan.outcome == 'success'
         env:
-          OCTOPUS_ENGINE_URL: ${{ vars.OCTOPUS_ENGINE_URL || secrets.OCTOPUS_ENGINE_URL }}
+          OCTOPUS_ENGINE_URL: ${{ vars.OCTOPUS_ENGINE_URL || secrets.OCTOPUS_ENGINE_URL || 'https://octopus-engine-app.benoitlubert.workers.dev' }}
           OCTOPUS_AUTHORIZATION: ${{ secrets.OCTOPUS_AUTHORIZATION }}
         run: python octopus_adapter.py
       - name: Persist observation including errors
