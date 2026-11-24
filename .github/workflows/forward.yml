@@ -1,0 +1,28 @@
+name: Forward paper experiment
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: forward-paper
+  cancel-in-progress: false
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover
+      - run: python forward.py
+      - run: |
+          git config user.name "Gege Paper"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/forward.json
+          git diff --cached --quiet || git commit -m "Prospective paper observation"
+          git pull --rebase
+          git push
