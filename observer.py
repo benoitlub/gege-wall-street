@@ -2,6 +2,7 @@
 import json
 import time
 import urllib.request
+import urllib.error
 from pathlib import Path
 from paper import Quote, eligible
 
@@ -11,8 +12,18 @@ RPC = "https://api.mainnet.solana.com"
 def request(url, payload=None):
     data = json.dumps(payload).encode() if payload is not None else None
     req = urllib.request.Request(url, data=data, headers={"Content-Type":"application/json","User-Agent":"GegeWallStreet/0.2"})
-    with urllib.request.urlopen(req, timeout=20) as response:
-        return json.load(response)
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(req, timeout=20) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            if exc.code == 429 and attempt == 0:
+                try: delay = float(exc.headers.get("Retry-After", "5"))
+                except ValueError: delay = 5
+                if delay <= 15:
+                    time.sleep(max(2, delay))
+                    continue
+            raise RuntimeError(f"{'Solana RPC' if url == RPC else 'DEX Screener'} HTTP {exc.code}") from None
 
 def rpc(method, params):
     result = request(RPC, {"jsonrpc":"2.0","id":1,"method":method,"params":params})
@@ -26,6 +37,13 @@ def inspect(address):
     if not pairs:
         raise ValueError("No matching base-token pool")
     pair = max(pairs,key=lambda p:float((p.get("liquidity") or {}).get("usd") or 0))
+    market = {"address":address,"symbol":pair["baseToken"].get("symbol"),"price_usd":pair.get("priceUsd"),"volume":pair.get("volume"),"price_change":pair.get("priceChange"),"liquidity_usd":(pair.get("liquidity") or {}).get("usd")}
+    try:
+        return {**market, **security(address,pair)}
+    except Exception as exc:
+        return {**market,"decision":"skip","eligible":False,"security_status":"unverified","reason":str(exc)}
+
+def security(address,pair):
     supply = int(rpc("getTokenSupply",[address])["value"]["amount"])
     time.sleep(.5)
     accounts = rpc("getTokenLargestAccounts",[address])["value"]
@@ -58,7 +76,7 @@ if __name__=="__main__":
     output={"timestamp":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),"mode":"paper","initial_eur":100}
     try:
         output["observations"]=scan()
-        output["status"]="observed"
+        output["status"]="observed" if any(o.get("price_usd") for o in output["observations"]) else "error"
     except Exception as exc:
         output.update(status="error",error=str(exc),observations=[])
     Path("docs").mkdir(exist_ok=True)
