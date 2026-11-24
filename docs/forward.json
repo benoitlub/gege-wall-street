@@ -1,0 +1,50 @@
+{
+  "mode": "paper_only",
+  "treasury": {
+    "capital": "20.00",
+    "reserve": "0.00",
+    "payable": "0.00",
+    "paid": "0.00",
+    "deficit": "0.00",
+    "halted": false,
+    "mode": "paper_only",
+    "real_money": false
+  },
+  "events": [
+    {
+      "pair": "XBTEUR",
+      "timestamp": 1795563720,
+      "price": 54525.6,
+      "signal": 0,
+      "action": "cash"
+    }
+  ],
+  "last": 1795563720,
+  "position": null,
+  "observations": {
+    "XBTEUR": {
+      "bid": 54525.5,
+      "ask": 54525.6,
+      "score": -0.0061372395929699675,
+      "signal": 0
+    },
+    "ETHEUR": {
+      "bid": 1530.61,
+      "ask": 1530.62,
+      "score": -0.007688944190928804,
+      "signal": 0
+    },
+    "SOLEUR": {
+      "bid": 63.67,
+      "ask": 63.68,
+      "score": -0.014517133956386208,
+      "signal": -1
+    }
+  },
+  "observed_at": 1795563720,
+  "limitations": [
+    "BTC ETH SOL spot only; observed bid/ask plus assumed 0.3% per side",
+    "Single shared capital; one position at a time; strongest positive trend",
+    "No actual fills or automatic payouts; closes at next successful observation"
+  ]
+}
