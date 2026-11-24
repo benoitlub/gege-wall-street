@@ -1,23 +1,23 @@
 {
-  "timestamp": "2026-11-24T22:48:52Z",
+  "timestamp": "2026-11-24T22:52:14Z",
   "mode": "paper",
   "initial_eur": 100,
   "observations": [
     {
       "address": "Ed24VXWVmRGpufeE5hJqE2engYgXrf239BiDrWbZpump",
       "symbol": "CHARITY",
-      "price_usd": "0.000007292",
+      "price_usd": "0.000002985",
       "volume": {
-        "h24": 78841.55,
-        "h6": 78841.55,
-        "h1": 78841.55,
-        "m5": 30679.31
+        "h24": 82738.61,
+        "h6": 82738.61,
+        "h1": 82738.61,
+        "m5": 10595.22
       },
       "price_change": {
-        "m5": -49.46,
-        "h1": -20.31,
-        "h6": -20.31,
-        "h24": -20.31
+        "m5": -70.59,
+        "h1": -67.38,
+        "h6": -67.38,
+        "h24": -67.38
       },
       "liquidity_usd": null,
       "decision": "skip",
@@ -38,20 +38,20 @@
     {
       "address": "ES7EGhS29PebFyTTf2PYdnJNPvcF9yzoSeZrMT5xpump",
       "symbol": "goldinu",
-      "price_usd": "0.00004438",
+      "price_usd": "0.00003295",
       "volume": {
-        "h24": 7.73,
-        "h6": 7.73,
-        "h1": 7.73,
-        "m5": 0.4
+        "h24": 9.19,
+        "h6": 9.19,
+        "h1": 9.19,
+        "m5": 1.85
       },
       "price_change": {
-        "m5": -8.19,
-        "h1": 36.77,
-        "h6": 36.77,
-        "h24": 36.77
+        "m5": -31.83,
+        "h1": 1.55,
+        "h6": 1.55,
+        "h24": 1.55
       },
-      "liquidity_usd": 20.79,
+      "liquidity_usd": 17.92,
       "decision": "skip",
       "eligible": false,
       "security_status": "not_checked",
@@ -75,10 +75,10 @@
         "h24": 71935.2,
         "h6": 71935.2,
         "h1": 71935.2,
-        "m5": 617.11
+        "m5": 124.65
       },
       "price_change": {
-        "m5": -5.1,
+        "m5": 4.81,
         "h1": 19.74,
         "h6": 19.74,
         "h24": 19.74
@@ -102,18 +102,18 @@
     {
       "address": "54Y1hTxnbNha2kkHAC2LqHGXTiEMg3uNr1pYbMQ9pump",
       "symbol": "SCOOBY",
-      "price_usd": "0.000008572",
+      "price_usd": "0.000008883",
       "volume": {
-        "h24": 87185.95,
-        "h6": 87185.95,
-        "h1": 87185.95,
-        "m5": 4621.45
+        "h24": 89875.95,
+        "h6": 89875.95,
+        "h1": 89875.95,
+        "m5": 3174.42
       },
       "price_change": {
-        "m5": 9.79,
-        "h1": 301,
-        "h6": 301,
-        "h24": 301
+        "m5": 18.72,
+        "h1": 315,
+        "h6": 315,
+        "h24": 315
       },
       "liquidity_usd": null,
       "decision": "skip",
@@ -134,18 +134,18 @@
     {
       "address": "ANDLpP3C7tFXEpqRBmmnbS4usmQthHfs93N5oHGpump",
       "symbol": "BOUNCER",
-      "price_usd": "0.00001759",
+      "price_usd": "0.00001968",
       "volume": {
-        "h24": 49977.02,
-        "h6": 49977.02,
-        "h1": 18283.63,
-        "m5": 1465.57
+        "h24": 51379.92,
+        "h6": 51379.92,
+        "h1": 17462.86,
+        "m5": 2264.84
       },
       "price_change": {
-        "m5": 23.56,
-        "h1": 25.39,
-        "h6": 357,
-        "h24": 357
+        "m5": 19.75,
+        "h1": 41.71,
+        "h6": 412,
+        "h24": 412
       },
       "liquidity_usd": null,
       "decision": "skip",
