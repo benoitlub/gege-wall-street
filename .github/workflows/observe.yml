@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python -m py_compile observer.py octopus_adapter.py memory.py paper.py
+      - run: python -m unittest discover
       - run: python paper.py
       - name: Observe market
         id: scan
@@ -42,6 +44,9 @@ jobs:
           if test -f docs/cortex.json; then git add docs/cortex.json; fi
           git diff --cached --quiet || git commit -m "Observer market snapshot"
           git push
+      - name: Report failed Cortex research
+        if: inputs.cortex && steps.scan.outcome == 'success'
+        run: python -c "import json; d=json.load(open('docs/cortex.json')); print(d['status']); assert d['status']=='proposed', d.get('http_status',d['status'])"
       - name: Report failed collection
         if: steps.scan.outcome == 'failure'
         run: exit 1
