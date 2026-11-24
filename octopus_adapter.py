@@ -95,4 +95,4 @@ if __name__=="__main__":
     result=research(snapshot,history)
     result["source_timestamp"]=snapshot.get("timestamp")
     Path("docs/cortex.json").write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
-    print(result["status"])
+    print(json.dumps({k:result[k] for k in ("status","http_status","response_type","error_type","stage","operationId") if k in result}))
