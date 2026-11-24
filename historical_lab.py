@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from backtest import compare
 from directional import compare as directional_compare
+from darwin import rank
 
 def candles(pair):
     url="https://api.kraken.com/0/public/OHLC?pair="+pair+"&interval=60"
@@ -26,6 +27,10 @@ def main():
             report["assets"][pair]={"candles":len(rows),"first":int(rows[0][0]),"last":int(rows[-1][0]),"spot":compare(prices),"directional_hypothetical":directional_compare(prices,shortable=True)}
         except Exception as exc:
             report["assets"][pair]={"error":type(exc).__name__}
+    for asset in report["assets"].values():
+        if "spot" in asset:
+            asset["darwin_spot"]=rank(asset["spot"])
+            asset["darwin_directional_hypothetical"]=rank(asset["directional_hypothetical"])
     report["status"]="completed" if all("error" not in v for v in report["assets"].values()) else "partial_or_failed"
     Path("docs/backtest.json").write_text(json.dumps(report,indent=2),encoding="utf-8")
     return report["status"]=="completed"
