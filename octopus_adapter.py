@@ -30,12 +30,12 @@ def research(snapshot, history):
     operation = str(uuid.uuid4())
     context = {"snapshot":snapshot,"history":history[-5:]}
     payload = {"operationId":operation,"title":"Gege Wall Street pattern research","objective":"Propose falsifiable research hypotheses only","requiredCapabilities":["copy.generate"],"context":{"id":"gege-wall-street","label":"Pattern Lab","metadata":{"mode":"paper"}},"prompt":SYSTEM+" Data: "+json.dumps(context,ensure_ascii=False)[:24000]}
-    headers={"Content-Type":"application/json"}
+    headers={"Content-Type":"application/json","X-Octopus-Caller":"gege-wall-street","User-Agent":"GegeWallStreet/0.3"}
     auth=os.environ.get("OCTOPUS_AUTHORIZATION")
     if auth: headers["Authorization"]=auth
     req=urllib.request.Request(endpoint,data=json.dumps(payload).encode(),headers=headers)
     try:
-        with urllib.request.urlopen(req,timeout=35) as response:
+        with urllib.request.urlopen(req,timeout=90) as response:
             raw=json.load(response)
         if raw.get("status")!="completed" or raw.get("operationId")!=operation:
             raise ValueError("Unverified mission")
@@ -57,7 +57,7 @@ def research(snapshot, history):
             hypotheses.append({"family":h["family"],**{k:h[k][:800] for k in ("hypothesis","required_data","falsification")},"validated":False})
         return {"status":"proposed" if hypotheses else "no_hypotheses","source":"octopus","operationId":operation,"hypotheses":hypotheses}
     except urllib.error.HTTPError as exc:
-        return {"status":"provider_error","http_status":exc.code,"operationId":operation,"hypotheses":[]}
+        return {"status":"provider_error","http_status":exc.code,"response_type":exc.headers.get("Content-Type","").split(";")[0],"cloudflare_ray":exc.headers.get("CF-Ray"),"operationId":operation,"hypotheses":[]}
     except Exception as exc:
         return {"status":"provider_error","error_type":type(exc).__name__,"hypotheses":[]}
 
