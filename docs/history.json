@@ -1,0 +1,59 @@
+[
+  {
+    "timestamp": "2026-11-24T21:55:07Z",
+    "status": "observed",
+    "summary": {
+      "observed": 5,
+      "rejected": 0,
+      "errors": 5,
+      "orders": 0
+    },
+    "observations": [
+      {
+        "address": "9YGfkrwK2krv3bbhrTGrL5gxCwEattusrtp5VY6ppriv",
+        "decision": "error",
+        "reason": "HTTP Error 429: Too Many Requests",
+        "guardian_reasons": [
+          "Observation failed"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "2SheVTv9MeyWhau6sKfLvSyWhsGJ44Wc5MD7SWAppump",
+        "decision": "error",
+        "reason": "HTTP Error 429: Too Many Requests",
+        "guardian_reasons": [
+          "Observation failed"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "GNZW429V3HJNX7CMdHjkGTnaAbQHwMaxk93gBTSKpump",
+        "decision": "error",
+        "reason": "HTTP Error 429: Too Many Requests",
+        "guardian_reasons": [
+          "Observation failed"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "CkwFr1G8EPLLJSnp84PmwjEDRG4yA7bGJvRxRTx5pump",
+        "decision": "error",
+        "reason": "HTTP Error 429: Too Many Requests",
+        "guardian_reasons": [
+          "Observation failed"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "Cp6i5Ka8Gwzzn537KoqLyjQCFX6QBfoAC9WuxEbQpump",
+        "decision": "error",
+        "reason": "HTTP Error 429: Too Many Requests",
+        "guardian_reasons": [
+          "Observation failed"
+        ],
+        "paper_order": false
+      }
+    ]
+  }
+]
