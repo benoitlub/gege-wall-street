@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       cortex:
-        description: 'Authorize one Mistral research request (API usage may incur costs)'
+        description: 'Authorize one Octopus research request (API usage may incur costs)'
         type: boolean
         default: false
 permissions:
@@ -30,7 +30,8 @@ jobs:
       - name: Research hypotheses
         if: inputs.cortex && steps.scan.outcome == 'success'
         env:
-          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          OCTOPUS_ENGINE_URL: ${{ vars.OCTOPUS_ENGINE_URL || secrets.OCTOPUS_ENGINE_URL }}
+          OCTOPUS_AUTHORIZATION: ${{ secrets.OCTOPUS_AUTHORIZATION }}
         run: python octopus_adapter.py
       - name: Persist observation including errors
         run: |
