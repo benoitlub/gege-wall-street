@@ -1,15 +1,15 @@
 {
   "status": "no_hypotheses",
   "source": "octopus",
-  "operationId": "bdc9238d-fc6c-4d08-9e97-b6da234dd3e4",
+  "operationId": "ceb2fbba-4a3a-4fcb-ba49-45d4bb04ffc9",
   "briefing": {
-    "understood": "Données limitées à 5 actifs non éligibles (liquidity_usd=null ou volume/price incohérents). Pas d’historique de prix exploitable pour backtest. Hypothèses basées sur microstructure (volume, liquidité implicite) et régimes de volatilité extrêmes.",
-    "devised": "Tester des stratégies de *breakout* sur micro-cap avec filtres de liquidité dynamique et *volatility clustering* (ex : +3σ sur 5m). Éviter les biais de survie via walk-forward sur 30j simulés (pas de données réelles).",
-    "profit_mechanism": "Cibler les *BOUNCER*/*SCOOBY*-like avec volume anormal (>Q3+1.5*IQR sur 24h) + gap >2% en opening, exit à -1% ou après 1h. Coûts estimés : 0.3% slippage + 0.1% fees (AMM).",
+    "understood": "Données limitées à 5 actifs non éligibles (liquidités/volatilité insuffisantes pour tests robustes). Historique récent (24h) montre rejet systématique des observations (pas d’ordres exécutés). Hypothèses à tester sur actifs éligibles avec liquidité > 100k USD/h et volatilité > 20% sur 24h.",
+    "devised": "Stratégies atomiques ciblées : *momentum intraday* (breakout + volume) et *reversal* (volatility squeeze) avec hedges dynamiques (corrélation sectorielle). Sizing basé sur liquidity depth et slippage estimé (<0.5%). Exit via stop-loss (2σ) ou take-profit (1.5σ).",
+    "profit_mechanism": "Net gains via combinaison de *momentum* (régimes haussiers) et *reversal* (régimes latéraux/volatils) avec hedge partiel sur actifs corrélés (ex: pairs de memecoins). Coûts exécutés (0.3% slippage) et funding (0% hypothétique) intégrés.",
     "evidence": "Aucun résultat de backtest vérifié fourni à Cortex.",
-    "risks": "Surconcentration risque (5 actifs), liquidité illusoire (liquidity_usd=null), drawdowns >50% probables. Corruption de données possible (ex : volume constant sur toutes échelles temporelles).",
-    "next_experiment": "Collecter 30j de tick data pour *SCOOBY* et *BOUNCER* avec : prix, volume, ordre book depth (>10 niveaux), et métadonnées (exchange, timestamp précis). Appliquer filtre : liquidity_usd > 50k USD * price, volume > 10k USD/24h."
+    "risks": "Biais de survie (actifs éligibles non identifiés), slippage élevé (>1% sur petits capitaux), drawdowns non modélisés sans historique complet. Risque de *false discovery* sans validation walk-forward.",
+    "next_experiment": "1. Sélectionner 3 actifs éligibles (liquidité > 100k USD/h, volatilité > 20%) dans le même écosystème (ex: memecoins). 2. Backtester *momentum + reversal* avec hedge 50% sur paire corrélée (ex: 4CHAN vs Jimmies) sur 3 mois, walk-forward monthly. 3. Mesurer ratio Sharpe net coûts (slippage + fees)."
   },
   "hypotheses": [],
-  "source_timestamp": "2026-11-24T22:52:14Z"
+  "source_timestamp": "2026-11-24T23:45:02Z"
 }
