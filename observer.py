@@ -9,6 +9,9 @@ from paper import Quote, eligible
 DEX = "https://api.dexscreener.com"
 RPC = "https://api.mainnet.solana.com"
 
+class RateLimited(RuntimeError):
+    pass
+
 def request(url, payload=None):
     data = json.dumps(payload).encode() if payload is not None else None
     req = urllib.request.Request(url, data=data, headers={"Content-Type":"application/json","User-Agent":"GegeWallStreet/0.2"})
@@ -23,6 +26,8 @@ def request(url, payload=None):
                 if delay <= 15:
                     time.sleep(max(2, delay))
                     continue
+            if exc.code == 429 and url == RPC:
+                raise RateLimited("Solana RPC HTTP 429") from None
             raise RuntimeError(f"{'Solana RPC' if url == RPC else 'DEX Screener'} HTTP {exc.code}") from None
 
 def rpc(method, params):
@@ -31,7 +36,7 @@ def rpc(method, params):
         raise RuntimeError(str(result["error"]))
     return result["result"]
 
-def inspect(address):
+def inspect(address, rpc_available=True):
     pairs = request(DEX + "/token-pairs/v1/solana/" + address)
     pairs = [p for p in pairs if p.get("baseToken",{}).get("address")==address]
     if not pairs:
@@ -40,6 +45,8 @@ def inspect(address):
     market = {"address":address,"symbol":pair["baseToken"].get("symbol"),"price_usd":pair.get("priceUsd"),"volume":pair.get("volume"),"price_change":pair.get("priceChange"),"liquidity_usd":(pair.get("liquidity") or {}).get("usd")}
     if float(market["liquidity_usd"] or 0)<25000:
         return {**market,"decision":"skip","eligible":False,"security_status":"not_checked","reason":"Liquidity missing or below threshold"}
+    if not rpc_available:
+        return {**market,"decision":"skip","eligible":False,"security_status":"unverified","reason":"Solana RPC rate limited earlier in this scan"}
     try:
         return {**market, **security(address,pair)}
     except Exception as exc:
@@ -66,9 +73,12 @@ def scan(limit=5):
     profiles = request(DEX+"/token-profiles/latest/v1")
     addresses = list(dict.fromkeys(p["tokenAddress"] for p in profiles if p.get("chainId")=="solana"))[:limit]
     results=[]
+    rpc_available=True
     for address in addresses:
         try:
-            results.append(inspect(address))
+            result=inspect(address,rpc_available)
+            results.append(result)
+            if result.get("reason")=="Solana RPC HTTP 429": rpc_available=False
         except Exception as exc:
             results.append({"address":address,"decision":"error","reason":str(exc)})
         time.sleep(1)
