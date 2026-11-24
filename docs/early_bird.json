@@ -1,0 +1,373 @@
+{
+  "mode": "observation_only",
+  "tokens": {
+    "8nZQ36gei4au7wdmnCDQDEquyPiRzMJNMymXnkiKpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 3.734e-06,
+          "liquidity": null,
+          "pair_created": 1795562502000
+        }
+      ],
+      "pair": "AMYn6YjbKNfcKR3jxRmwVKZcd9A1eSWW12iXS962Txfu"
+    },
+    "AuPon7CveYeRk3E7YdUt9QMGu5hEGkqSxzo9NiZdpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.19e-05,
+          "liquidity": 9628.9,
+          "pair_created": 1795562827000
+        }
+      ],
+      "pair": "7Anuz4f24P4UH5z7JbXvNxgaRc4ttNdCbJFTSro34Q7j"
+    },
+    "GisWWjhwrSud4aFGSHvTMt85Ky14sY7LeBFCpfoFpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 0.0001919,
+          "liquidity": 29866.21,
+          "pair_created": 1795562235000
+        }
+      ],
+      "pair": "BXrbrMuLSW1qaS4P3R7AUPR6YX2E56Re94WJedoxLiV5"
+    },
+    "816BuXnCFQqt6KXbBTcFgHWD29Ckpaqt8HMKSN4Vpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 0.001056,
+          "liquidity": 74113.35,
+          "pair_created": 1795561554000
+        }
+      ],
+      "pair": "Bv86sCUTEKWpg6vHpaEArpbd6vosPPBwtoZdne7NUtf9"
+    },
+    "FvktmXnnZnoVuLYgdo1FSXeydthfhFC7P8orYCEmpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 1.946e-05,
+          "liquidity": 8584.84,
+          "pair_created": 1795520810000
+        }
+      ],
+      "pair": "oqFeYjsBoMHaUrC5E5gFc6uFaMbRHVgoPb9xwAwx8W3"
+    },
+    "9guNcpbsmqcKJikLNBcn8g5AoG3v9k98zK51KcoXpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 3.865e-05,
+          "liquidity": 13086.49,
+          "pair_created": 1795561714000
+        }
+      ],
+      "pair": "DnaPD8pZpchF6BvgT8GXZr2buLrSsVytYLaDgBuoiAhA"
+    },
+    "BMqyT3n9kXYhBjWKFdgGmPzbNbqcXs8sNgXWhw7tpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.025e-05,
+          "liquidity": 8805.84,
+          "pair_created": 1795561338000
+        }
+      ],
+      "pair": "G23D2ReSMmtEmx24oaoiBrCTCak8BTaKZRdmkUiNth9U"
+    },
+    "GYW5LKz3wK9EAoC62FVocPkbCrSpaXMcyfJSTJmbpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.056e-06,
+          "liquidity": null,
+          "pair_created": 1795561500000
+        }
+      ],
+      "pair": "Fo3r81CCLQk74s2fBRrAvWSCkFMkX4BDp2mvUfgMBhmb"
+    },
+    "7eaPrRzR1i3akX7a7jodh7eSgYSfcC3xnzqWd9hNpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.186e-06,
+          "liquidity": 2058.48,
+          "pair_created": 1795561551000
+        }
+      ],
+      "pair": "H2o391orMNcbc8dVQ6E5wBHzWCTvFaxyJbRY4MwZbSEg"
+    },
+    "2F9HbwGvgrcT37unuMa4QcSP4SPhxynmN6mbri2apump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.297e-06,
+          "liquidity": null,
+          "pair_created": 1795560505000
+        }
+      ],
+      "pair": "4wp9RgKBepKM6fbKBDp2D49aUHqrU6EaCuuRA97mmAc2"
+    },
+    "FDv89drtnpyApMMLqy6D2PiDSxnGUs7jeHBF26ebpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 1.28e-06,
+          "liquidity": 1266.62,
+          "pair_created": 1795561290000
+        }
+      ],
+      "pair": "AM4Fb1wYVuUQodkteTPhjvG69MvgFJ6aiiCBdgumqjpr"
+    },
+    "G2YWYVbmgm7JZzFhXKSoE2nxZh8wwwRGWSyrBGqApump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.254e-06,
+          "liquidity": 2103.72,
+          "pair_created": 1795560602000
+        }
+      ],
+      "pair": "J2WvQfQ7rSEpMcLjLcc1Jfy5pbcDAUkZK8k8NDDuyKqe"
+    },
+    "Ed24VXWVmRGpufeE5hJqE2engYgXrf239BiDrWbZpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.015e-06,
+          "liquidity": null,
+          "pair_created": 1795559976000
+        }
+      ],
+      "pair": "EmZ5ojNZUk1Ys9pAJRwez6uJkxAcw2BdgBxnLihrXKXW"
+    },
+    "ES7EGhS29PebFyTTf2PYdnJNPvcF9yzoSeZrMT5xpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "missing_pair"
+        }
+      ]
+    },
+    "54Y1hTxnbNha2kkHAC2LqHGXTiEMg3uNr1pYbMQ9pump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.51e-06,
+          "liquidity": null,
+          "pair_created": 1795559033000
+        }
+      ],
+      "pair": "A1Q4KG8bMY1ds3Q7dP9xfcmxs6amZ9H4FPDgrdtocity"
+    },
+    "ANDLpP3C7tFXEpqRBmmnbS4usmQthHfs93N5oHGpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 3.138e-06,
+          "liquidity": null,
+          "pair_created": 1795552482000
+        }
+      ],
+      "pair": "8j8apXSGYWc9m9XySAADCYmUzhetFzs2ZMoj36opQ8YA"
+    },
+    "GkSZVKcXcgodewdZd5CbGxFJoUUcazrf1GayrNv3pump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 0.00015,
+          "liquidity": 26426.45,
+          "pair_created": 1795558404000
+        }
+      ],
+      "pair": "XPJCYbCsKLtkXWeKv7ynxjzjdBGsTk5AuPBvy8MVUc7"
+    },
+    "w4Lvmpe5Cpi3n7bwpTCQRTgKT74YFVyRqBVxXnCZBLK": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.299e-06,
+          "liquidity": null,
+          "pair_created": 1795558185000
+        }
+      ],
+      "pair": "3cNyThThaTreRwoZyKjHjXd4s43Ujr95Q9FMixGViq3P"
+    },
+    "5Mjo3Y76ek44tUk9NGSiziQEU13t9E21VrsCjX2Bpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.947e-05,
+          "liquidity": 10843.63,
+          "pair_created": 1795544380000
+        }
+      ],
+      "pair": "EV37SwP6294cHU4YdFjfaRjXPs2WGkFisxMdwpFii1Aw"
+    },
+    "6SKYN3EYaCGrNQqStXqQo5gtvDAxvjW4xCPLgWPgpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 4.922e-06,
+          "liquidity": null,
+          "pair_created": 1795557587000
+        }
+      ],
+      "pair": "9rkk2CxtoVZgTcTZxZs8VMyzn4U4cuDajXXtnY6keFxN"
+    },
+    "BTbP7QckBbsEqnkynYF4BcmAz8CQAnxYsuPHbtXYpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 1.598e-05,
+          "liquidity": null,
+          "pair_created": 1795555958000
+        }
+      ],
+      "pair": "CD9TZ6P5u5XhSVDyD5L83aVSwdJ6Aym6t6sHKkBEng7A"
+    },
+    "8xKZ1yzPFGG1hfsqwPR2tGWsSMx9rJWQGJKiYjKUCLRx": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 8.368e-06,
+          "liquidity": null,
+          "pair_created": 1795555256000
+        }
+      ],
+      "pair": "DbdgjtiiRBWY2C3F3cLssjgfaFQXkRWuoHjduEvexJ9f"
+    },
+    "9YGfkrwK2krv3bbhrTGrL5gxCwEattusrtp5VY6ppriv": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 1.983e-06,
+          "liquidity": null,
+          "pair_created": 1795557041000
+        }
+      ],
+      "pair": "HfjGGBvnGSDFjCkBN4jwPpeyicnQK2eGeRTQSVR75vbY"
+    },
+    "2SheVTv9MeyWhau6sKfLvSyWhsGJ44Wc5MD7SWAppump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 5.065e-06,
+          "liquidity": 3765.1,
+          "pair_created": 1795557554000
+        }
+      ],
+      "pair": "AhPnmdxjFouYJBK26ysDfVMqZaVi7vVgfERZ43DShXaj"
+    },
+    "GNZW429V3HJNX7CMdHjkGTnaAbQHwMaxk93gBTSKpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 2.753e-06,
+          "liquidity": null,
+          "pair_created": 1795553971000
+        }
+      ],
+      "pair": "E6LadPgH27MHmhNwCJot33sqccLSzLdB79JuB887KzNy"
+    },
+    "CkwFr1G8EPLLJSnp84PmwjEDRG4yA7bGJvRxRTx5pump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 1.32e-06,
+          "liquidity": 1401.8,
+          "pair_created": 1795555953000
+        }
+      ],
+      "pair": "E2PCxvLyg9CVjT1gToCQn3FuxbQnZS3NA6sVpibWazV"
+    },
+    "Cp6i5Ka8Gwzzn537KoqLyjQCFX6QBfoAC9WuxEbQpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 6.127e-05,
+          "liquidity": 21195.05,
+          "pair_created": 1795556583000
+        }
+      ],
+      "pair": "hGE1tMC84avducEFSwovCRYbYHpAYedrskSPcqgzAdH"
+    },
+    "E2HgkB6ANz21RaMpbDcVq4MkSdXkPPjQ5rUBawGKpump": {
+      "detected": 1795563730,
+      "samples": [
+        {
+          "time": 1795563730,
+          "status": "observed",
+          "price": 3.63e-06,
+          "liquidity": 2969.03,
+          "pair_created": 1795555777000
+        }
+      ],
+      "pair": "6J5WSQKaqv69ff8sBQkNtMexKuZmcTnZn5tk7n6PPqU"
+    }
+  },
+  "updated": 1795563730,
+  "target": 1000,
+  "limitations": [
+    "Latest profiles are not an exhaustive launch feed",
+    "Detection time is not launch time",
+    "Missing pairs are not assumed worthless",
+    "No security approval or executable returns"
+  ]
+}
