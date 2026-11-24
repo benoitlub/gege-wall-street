@@ -15,3 +15,6 @@ Compréhension, stratégie concoctée, mécanisme de gain, preuves disponibles, 
 
 ## État
 Charte de recherche uniquement. Moteur historique, stratégies, planification et validation restent à implémenter. Toute transition vers de l'argent réel nécessite une décision distincte de l'utilisateur.
+
+## Recherche bidirectionnelle
+Comparer en simulation LONG, SHORT, RANGE, CASH, arbitrage et couverture. Modéliser disponibilité de l'emprunt, funding, frais, slippage, liquidation et risque de contrepartie avant toute simulation short exécutable. Ne jamais supposer qu'un token spot est shortable. Tester les régimes haussiers, baissiers et latéraux hors échantillon. Mesurer rendement net, fréquence des pertes, drawdown, risque de ruine et incertitude. L'abstention est une décision valide; aucun rendement sans risque n'est présumé. Aucun short réel ni levier autorisé.
