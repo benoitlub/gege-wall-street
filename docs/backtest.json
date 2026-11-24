@@ -1,0 +1,626 @@
+{
+  "timestamp": "2026-11-24T23:01:41.219113+00:00",
+  "mode": "historical_research_only",
+  "interval_minutes": 60,
+  "assets": {
+    "XBTEUR": {
+      "candles": 720,
+      "first": 1792969200,
+      "last": 1795557600,
+      "spot": {
+        "momentum": {
+          "initial": 20.0,
+          "final": 17.119989620269568,
+          "net_return": -0.14400051898652166,
+          "max_drawdown": 0.14914942461061043,
+          "executions": 38
+        },
+        "reversal": {
+          "initial": 20.0,
+          "final": 20.25570852839438,
+          "net_return": 0.012785426419718915,
+          "max_drawdown": 0.026228731886342338,
+          "executions": 4
+        },
+        "breakout": {
+          "initial": 20.0,
+          "final": 18.82157214566323,
+          "net_return": -0.058921392716838605,
+          "max_drawdown": 0.06138152422196286,
+          "executions": 16
+        },
+        "cash": {
+          "initial": 20.0,
+          "final": 20.0,
+          "net_return": 0.0,
+          "max_drawdown": 0.0,
+          "executions": 0
+        },
+        "buy_hold": {
+          "initial": 20.0,
+          "final": 18.345480219528003,
+          "net_return": -0.08272598902359984,
+          "max_drawdown": 0.14572116818882463,
+          "executions": 2
+        }
+      },
+      "directional_hypothetical": {
+        "adaptive": {
+          "initial": 20.0,
+          "final": 17.956293698620808,
+          "net_return": -0.10218531506895956,
+          "max_drawdown": 0.12295118810003525,
+          "executions": 22,
+          "adverse_bars": 37,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "long": {
+          "initial": 20.0,
+          "final": 18.345314890060692,
+          "net_return": -0.08273425549696545,
+          "max_drawdown": 0.14315905401491325,
+          "executions": 2,
+          "adverse_bars": 118,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "short": {
+          "initial": 20.0,
+          "final": 20.803963993609106,
+          "net_return": 0.04019819968045524,
+          "max_drawdown": 0.13806456540530798,
+          "executions": 2,
+          "adverse_bars": 98,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "cash": {
+          "initial": 20.0,
+          "final": 20.0,
+          "net_return": 0.0,
+          "max_drawdown": 0.0,
+          "executions": 0,
+          "adverse_bars": 0,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        }
+      },
+      "darwin_spot": {
+        "ranking": [
+          {
+            "strategy": "cash",
+            "score": 0.0,
+            "net_return": 0.0,
+            "max_drawdown": 0.0,
+            "executions": 0,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "reversal",
+            "score": -0.03967203735296576,
+            "net_return": 0.012785426419718915,
+            "max_drawdown": 0.026228731886342338,
+            "executions": 4,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "breakout",
+            "score": -0.18168444116076432,
+            "net_return": -0.058921392716838605,
+            "max_drawdown": 0.06138152422196286,
+            "executions": 16,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "buy_hold",
+            "score": -0.3741683254012491,
+            "net_return": -0.08272598902359984,
+            "max_drawdown": 0.14572116818882463,
+            "executions": 2,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "momentum",
+            "score": -0.4422993682077425,
+            "net_return": -0.14400051898652166,
+            "max_drawdown": 0.14914942461061043,
+            "executions": 38,
+            "eligible_for_further_research": false
+          }
+        ],
+        "next_candidate": "cash",
+        "status": "exploratory_only",
+        "score_formula": "net_return - 2 * max_drawdown",
+        "limits": {
+          "max_drawdown": 0.1,
+          "min_executions": 10
+        },
+        "warning": "Selection on this sample requires fresh independent validation; executions are not independent trades."
+      },
+      "darwin_directional_hypothetical": {
+        "ranking": [
+          {
+            "strategy": "cash",
+            "score": 0.0,
+            "net_return": 0.0,
+            "max_drawdown": 0.0,
+            "executions": 0,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "short",
+            "score": -0.23593093113016073,
+            "net_return": 0.04019819968045524,
+            "max_drawdown": 0.13806456540530798,
+            "executions": 2,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "adaptive",
+            "score": -0.34808769126903005,
+            "net_return": -0.10218531506895956,
+            "max_drawdown": 0.12295118810003525,
+            "executions": 22,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "long",
+            "score": -0.36905236352679194,
+            "net_return": -0.08273425549696545,
+            "max_drawdown": 0.14315905401491325,
+            "executions": 2,
+            "eligible_for_further_research": false
+          }
+        ],
+        "next_candidate": "cash",
+        "status": "exploratory_only",
+        "score_formula": "net_return - 2 * max_drawdown",
+        "limits": {
+          "max_drawdown": 0.1,
+          "min_executions": 10
+        },
+        "warning": "Selection on this sample requires fresh independent validation; executions are not independent trades."
+      }
+    },
+    "ETHEUR": {
+      "candles": 720,
+      "first": 1792969200,
+      "last": 1795557600,
+      "spot": {
+        "momentum": {
+          "initial": 20.0,
+          "final": 16.63024944856296,
+          "net_return": -0.16848752757185204,
+          "max_drawdown": 0.18187987825826735,
+          "executions": 42
+        },
+        "reversal": {
+          "initial": 20.0,
+          "final": 20.039552135276324,
+          "net_return": 0.0019776067638161976,
+          "max_drawdown": 0.03631334137288833,
+          "executions": 10
+        },
+        "breakout": {
+          "initial": 20.0,
+          "final": 19.124487853988388,
+          "net_return": -0.04377560730058061,
+          "max_drawdown": 0.04415768324002778,
+          "executions": 16
+        },
+        "cash": {
+          "initial": 20.0,
+          "final": 20.0,
+          "net_return": 0.0,
+          "max_drawdown": 0.0,
+          "executions": 0
+        },
+        "buy_hold": {
+          "initial": 20.0,
+          "final": 18.401976757912433,
+          "net_return": -0.07990116210437836,
+          "max_drawdown": 0.15154260105720463,
+          "executions": 2
+        }
+      },
+      "directional_hypothetical": {
+        "adaptive": {
+          "initial": 20.0,
+          "final": 18.29085858307503,
+          "net_return": -0.08545707084624854,
+          "max_drawdown": 0.09422050479283084,
+          "executions": 20,
+          "adverse_bars": 48,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "long": {
+          "initial": 20.0,
+          "final": 18.401810919298303,
+          "net_return": -0.07990945403508487,
+          "max_drawdown": 0.15154260105720574,
+          "executions": 2,
+          "adverse_bars": 119,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "short": {
+          "initial": 20.0,
+          "final": 20.654823581594517,
+          "net_return": 0.032741179079725846,
+          "max_drawdown": 0.15065269552998461,
+          "executions": 2,
+          "adverse_bars": 97,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "cash": {
+          "initial": 20.0,
+          "final": 20.0,
+          "net_return": 0.0,
+          "max_drawdown": 0.0,
+          "executions": 0,
+          "adverse_bars": 0,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        }
+      },
+      "darwin_spot": {
+        "ranking": [
+          {
+            "strategy": "cash",
+            "score": 0.0,
+            "net_return": 0.0,
+            "max_drawdown": 0.0,
+            "executions": 0,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "reversal",
+            "score": -0.07064907598196046,
+            "net_return": 0.0019776067638161976,
+            "max_drawdown": 0.03631334137288833,
+            "executions": 10,
+            "eligible_for_further_research": true
+          },
+          {
+            "strategy": "breakout",
+            "score": -0.13209097378063617,
+            "net_return": -0.04377560730058061,
+            "max_drawdown": 0.04415768324002778,
+            "executions": 16,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "buy_hold",
+            "score": -0.3829863642187876,
+            "net_return": -0.07990116210437836,
+            "max_drawdown": 0.15154260105720463,
+            "executions": 2,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "momentum",
+            "score": -0.5322472840883867,
+            "net_return": -0.16848752757185204,
+            "max_drawdown": 0.18187987825826735,
+            "executions": 42,
+            "eligible_for_further_research": false
+          }
+        ],
+        "next_candidate": "cash",
+        "status": "exploratory_only",
+        "score_formula": "net_return - 2 * max_drawdown",
+        "limits": {
+          "max_drawdown": 0.1,
+          "min_executions": 10
+        },
+        "warning": "Selection on this sample requires fresh independent validation; executions are not independent trades."
+      },
+      "darwin_directional_hypothetical": {
+        "ranking": [
+          {
+            "strategy": "cash",
+            "score": 0.0,
+            "net_return": 0.0,
+            "max_drawdown": 0.0,
+            "executions": 0,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "short",
+            "score": -0.2685642119802434,
+            "net_return": 0.032741179079725846,
+            "max_drawdown": 0.15065269552998461,
+            "executions": 2,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "adaptive",
+            "score": -0.2738980804319102,
+            "net_return": -0.08545707084624854,
+            "max_drawdown": 0.09422050479283084,
+            "executions": 20,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "long",
+            "score": -0.38299465614949635,
+            "net_return": -0.07990945403508487,
+            "max_drawdown": 0.15154260105720574,
+            "executions": 2,
+            "eligible_for_further_research": false
+          }
+        ],
+        "next_candidate": "cash",
+        "status": "exploratory_only",
+        "score_formula": "net_return - 2 * max_drawdown",
+        "limits": {
+          "max_drawdown": 0.1,
+          "min_executions": 10
+        },
+        "warning": "Selection on this sample requires fresh independent validation; executions are not independent trades."
+      }
+    },
+    "SOLEUR": {
+      "candles": 720,
+      "first": 1792969200,
+      "last": 1795557600,
+      "spot": {
+        "momentum": {
+          "initial": 20.0,
+          "final": 18.264814419773156,
+          "net_return": -0.08675927901134217,
+          "max_drawdown": 0.11866703539438339,
+          "executions": 38
+        },
+        "reversal": {
+          "initial": 20.0,
+          "final": 19.380225332644642,
+          "net_return": -0.030988733367767862,
+          "max_drawdown": 0.048184199843629094,
+          "executions": 16
+        },
+        "breakout": {
+          "initial": 20.0,
+          "final": 19.255666981581662,
+          "net_return": -0.03721665092091686,
+          "max_drawdown": 0.08049274993063116,
+          "executions": 24
+        },
+        "cash": {
+          "initial": 20.0,
+          "final": 20.0,
+          "net_return": 0.0,
+          "max_drawdown": 0.0,
+          "executions": 0
+        },
+        "buy_hold": {
+          "initial": 20.0,
+          "final": 19.2756334078253,
+          "net_return": -0.036218329608735056,
+          "max_drawdown": 0.12877792378449382,
+          "executions": 2
+        }
+      },
+      "directional_hypothetical": {
+        "adaptive": {
+          "initial": 20.0,
+          "final": 18.559043705787413,
+          "net_return": -0.07204781471062938,
+          "max_drawdown": 0.12135281646492735,
+          "executions": 22,
+          "adverse_bars": 57,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "long": {
+          "initial": 20.0,
+          "final": 19.275459695817492,
+          "net_return": -0.03622701520912541,
+          "max_drawdown": 0.12877792378449482,
+          "executions": 2,
+          "adverse_bars": 120,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "short": {
+          "initial": 20.0,
+          "final": 19.689677978302186,
+          "net_return": -0.015516101084890765,
+          "max_drawdown": 0.15890322907084264,
+          "executions": 2,
+          "adverse_bars": 95,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        },
+        "cash": {
+          "initial": 20.0,
+          "final": 20.0,
+          "net_return": 0.0,
+          "max_drawdown": 0.0,
+          "executions": 0,
+          "adverse_bars": 0,
+          "liquidated": false,
+          "short_enabled": true,
+          "model": "hypothetical_constant_notional_per_bar",
+          "limitations": [
+            "No verified borrowing or funding data",
+            "No intrabar liquidation or liquidity model",
+            "Rebalancing costs not fully modeled"
+          ]
+        }
+      },
+      "darwin_spot": {
+        "ranking": [
+          {
+            "strategy": "cash",
+            "score": 0.0,
+            "net_return": 0.0,
+            "max_drawdown": 0.0,
+            "executions": 0,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "reversal",
+            "score": -0.12735713305502605,
+            "net_return": -0.030988733367767862,
+            "max_drawdown": 0.048184199843629094,
+            "executions": 16,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "breakout",
+            "score": -0.19820215078217918,
+            "net_return": -0.03721665092091686,
+            "max_drawdown": 0.08049274993063116,
+            "executions": 24,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "buy_hold",
+            "score": -0.2937741771777227,
+            "net_return": -0.036218329608735056,
+            "max_drawdown": 0.12877792378449382,
+            "executions": 2,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "momentum",
+            "score": -0.32409334980010895,
+            "net_return": -0.08675927901134217,
+            "max_drawdown": 0.11866703539438339,
+            "executions": 38,
+            "eligible_for_further_research": false
+          }
+        ],
+        "next_candidate": "cash",
+        "status": "exploratory_only",
+        "score_formula": "net_return - 2 * max_drawdown",
+        "limits": {
+          "max_drawdown": 0.1,
+          "min_executions": 10
+        },
+        "warning": "Selection on this sample requires fresh independent validation; executions are not independent trades."
+      },
+      "darwin_directional_hypothetical": {
+        "ranking": [
+          {
+            "strategy": "cash",
+            "score": 0.0,
+            "net_return": 0.0,
+            "max_drawdown": 0.0,
+            "executions": 0,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "long",
+            "score": -0.29378286277811505,
+            "net_return": -0.03622701520912541,
+            "max_drawdown": 0.12877792378449482,
+            "executions": 2,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "adaptive",
+            "score": -0.3147534476404841,
+            "net_return": -0.07204781471062938,
+            "max_drawdown": 0.12135281646492735,
+            "executions": 22,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "short",
+            "score": -0.33332255922657605,
+            "net_return": -0.015516101084890765,
+            "max_drawdown": 0.15890322907084264,
+            "executions": 2,
+            "eligible_for_further_research": false
+          }
+        ],
+        "next_candidate": "cash",
+        "status": "exploratory_only",
+        "score_formula": "net_return - 2 * max_drawdown",
+        "limits": {
+          "max_drawdown": 0.1,
+          "min_executions": 10
+        },
+        "warning": "Selection on this sample requires fresh independent validation; executions are not independent trades."
+      }
+    }
+  },
+  "limitations": [
+    "Fixed rules, no optimization",
+    "Single chronological holdout, not independent repeated validation",
+    "Short benchmark hypothetical, no verified funding or borrow availability",
+    "No microcap liquidity or execution validation"
+  ],
+  "status": "completed"
+}
