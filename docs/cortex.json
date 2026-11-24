@@ -1,15 +1,15 @@
 {
   "status": "no_hypotheses",
   "source": "octopus",
-  "operationId": "ceb2fbba-4a3a-4fcb-ba49-45d4bb04ffc9",
+  "operationId": "113e8471-c097-46d7-9c64-c511757564ea",
   "briefing": {
-    "understood": "Données limitées à 5 actifs non éligibles (liquidités/volatilité insuffisantes pour tests robustes). Historique récent (24h) montre rejet systématique des observations (pas d’ordres exécutés). Hypothèses à tester sur actifs éligibles avec liquidité > 100k USD/h et volatilité > 20% sur 24h.",
-    "devised": "Stratégies atomiques ciblées : *momentum intraday* (breakout + volume) et *reversal* (volatility squeeze) avec hedges dynamiques (corrélation sectorielle). Sizing basé sur liquidity depth et slippage estimé (<0.5%). Exit via stop-loss (2σ) ou take-profit (1.5σ).",
-    "profit_mechanism": "Net gains via combinaison de *momentum* (régimes haussiers) et *reversal* (régimes latéraux/volatils) avec hedge partiel sur actifs corrélés (ex: pairs de memecoins). Coûts exécutés (0.3% slippage) et funding (0% hypothétique) intégrés.",
+    "understood": "Analyse des données limitées (5 actifs inéligibles, pas de données historiques exploitables) et mission prioritaire : décomposition génétique des stratégies (signal, direction, sizing, exit, hedge, recovery) avec focus sur la durabilité EUR 20–1000. Hypothèses à tester sur des actifs éligibles futurs.",
+    "devised": "Stratégies atomiques ciblées : *momentum intraday* (breakout + volume) + *reversal* (volatility squeeze) + *hedge* (corrélation paire) avec sizing adaptatif (liquidity-adjusted). Évaluation via walk-forward sur 3 mois minimum, avec correction multiple-testing (p-adjustment).",
+    "profit_mechanism": "Net gains via combinaison de *momentum* (upside) et *reversal* (downside protection) avec hedge dynamique (ex: LONG A + SHORT B si corrélation > 0.7). Coûts intégrés (slippage, funding) et cash baseline (0% risque).",
     "evidence": "Aucun résultat de backtest vérifié fourni à Cortex.",
-    "risks": "Biais de survie (actifs éligibles non identifiés), slippage élevé (>1% sur petits capitaux), drawdowns non modélisés sans historique complet. Risque de *false discovery* sans validation walk-forward.",
-    "next_experiment": "1. Sélectionner 3 actifs éligibles (liquidité > 100k USD/h, volatilité > 20%) dans le même écosystème (ex: memecoins). 2. Backtester *momentum + reversal* avec hedge 50% sur paire corrélée (ex: 4CHAN vs Jimmies) sur 3 mois, walk-forward monthly. 3. Mesurer ratio Sharpe net coûts (slippage + fees)."
+    "risks": "Biais de survie implicite (actifs rejetés), liquidité extrême (slippage > 5%), corrélation instable (hypothèses de hedge fragiles). Cible EUR 50/mois net ajusté risque (Sharpe > 0.5).",
+    "next_experiment": "1. Sélectionner 3 actifs éligibles (liquidity > 50k USD, volume h24 > 1M) avec données historiques 3+ mois. 2. Tester *momentum breakout* (entry: +2σ m5, exit: -1σ ou RSI>70) vs *reversal* (entry: -3σ m5 + volume spike) sur split train/val/test chronologique."
   },
   "hypotheses": [],
-  "source_timestamp": "2026-11-24T23:45:02Z"
+  "source_timestamp": "2026-11-24T23:47:30Z"
 }
