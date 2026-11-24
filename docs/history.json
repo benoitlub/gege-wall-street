@@ -112,5 +112,177 @@
         "paper_order": false
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-24T22:23:17Z",
+    "status": "observed",
+    "summary": {
+      "observed": 5,
+      "rejected": 5,
+      "errors": 0,
+      "orders": 0
+    },
+    "observations": [
+      {
+        "address": "w4Lvmpe5Cpi3n7bwpTCQRTgKT74YFVyRqBVxXnCZBLK",
+        "symbol": "BLOCK",
+        "price_usd": "0.000002634",
+        "volume": {
+          "h24": 44513.57,
+          "h6": 44513.57,
+          "h1": 44513.57,
+          "m5": 7720.1
+        },
+        "price_change": {
+          "m5": -83.42,
+          "h1": 34.13,
+          "h6": 34.13,
+          "h24": 34.13
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "unverified",
+        "reason": "Solana RPC HTTP 429",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "5Mjo3Y76ek44tUk9NGSiziQEU13t9E21VrsCjX2Bpump",
+        "symbol": "FLUTE",
+        "price_usd": "0.00002648",
+        "volume": {
+          "h24": 44211.16,
+          "h6": 44211.16,
+          "h1": 14383.71,
+          "m5": 757.76
+        },
+        "price_change": {
+          "m5": 16.4,
+          "h1": -39.7,
+          "h6": -12.11,
+          "h24": -12.11
+        },
+        "liquidity_usd": 10198.59,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "unverified",
+        "reason": "Solana RPC HTTP 429",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "6SKYN3EYaCGrNQqStXqQo5gtvDAxvjW4xCPLgWPgpump",
+        "symbol": "BFI",
+        "price_usd": "0.000006358",
+        "volume": {
+          "h24": 31630.46,
+          "h6": 31630.46,
+          "h1": 31630.46,
+          "m5": 853.08
+        },
+        "price_change": {
+          "m5": -2.42,
+          "h1": 142,
+          "h6": 142,
+          "h24": 142
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "unverified",
+        "reason": "Solana RPC HTTP 429",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "6qmoWWfCw1uVMfPzRWkCEu4kLmT9F8d3MXDMexXkpump",
+        "symbol": "AskGrok",
+        "price_usd": "0.000003391",
+        "volume": {
+          "h24": 32063.64,
+          "h6": 32063.64,
+          "h1": 32063.64,
+          "m5": 5.86
+        },
+        "price_change": {
+          "m5": -0.21,
+          "h1": -52.82,
+          "h6": -52.82,
+          "h24": -52.82
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "unverified",
+        "reason": "Solana RPC HTTP 429",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      },
+      {
+        "address": "BTbP7QckBbsEqnkynYF4BcmAz8CQAnxYsuPHbtXYpump",
+        "symbol": "SCRAP",
+        "price_usd": "0.00001978",
+        "volume": {
+          "h24": 80180.94,
+          "h6": 80180.94,
+          "h1": 80180.94,
+          "m5": 447.07
+        },
+        "price_change": {
+          "m5": -2.98,
+          "h1": 518,
+          "h6": 518,
+          "h24": 518
+        },
+        "liquidity_usd": null,
+        "decision": "skip",
+        "eligible": false,
+        "security_status": "unverified",
+        "reason": "Solana RPC HTTP 429",
+        "guardian_reasons": [
+          "Liquidity below threshold (missing or invalid)",
+          "Top ten token accounts too concentrated (missing or invalid)",
+          "Largest token account too concentrated (missing or invalid)",
+          "Mint authority not verified disabled (missing or invalid)",
+          "Freeze authority not verified disabled (missing or invalid)",
+          "LP protection unverified (missing or invalid)",
+          "Beneficial wallet ownership not verified"
+        ],
+        "paper_order": false
+      }
+    ]
   }
 ]
