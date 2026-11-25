@@ -24,31 +24,38 @@
       "price": 62.47,
       "signal": 0,
       "action": "cash"
+    },
+    {
+      "pair": "ETHEUR",
+      "timestamp": 1795622739,
+      "price": 1503.53,
+      "signal": 0,
+      "action": "cash"
     }
   ],
-  "last": 1795585195,
+  "last": 1795622739,
   "position": null,
   "observations": {
     "XBTEUR": {
-      "bid": 53876.9,
-      "ask": 53877.2,
-      "score": -0.0070533529909454495,
-      "signal": 0
+      "bid": 53214.5,
+      "ask": 53214.6,
+      "score": -0.01183092295987409,
+      "signal": -1
     },
     "ETHEUR": {
-      "bid": 1509.89,
-      "ask": 1509.99,
-      "score": -0.009284809868071675,
+      "bid": 1503.35,
+      "ask": 1503.53,
+      "score": -0.008412280083993973,
       "signal": 0
     },
     "SOLEUR": {
-      "bid": 62.46,
-      "ask": 62.47,
-      "score": -0.006836583598500479,
-      "signal": 0
+      "bid": 61.81,
+      "ask": 61.82,
+      "score": -0.014680953142491515,
+      "signal": -1
     }
   },
-  "observed_at": 1795585195,
+  "observed_at": 1795622739,
   "limitations": [
     "BTC ETH SOL spot only; observed bid/ask plus assumed 0.3% per side",
     "Single shared capital; one position at a time; strongest positive trend",
