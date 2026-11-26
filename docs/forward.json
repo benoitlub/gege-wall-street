@@ -1,11 +1,11 @@
 {
   "mode": "paper_only",
   "treasury": {
-    "capital": "20.00",
+    "capital": "19.95",
     "reserve": "0.00",
     "payable": "0.00",
     "paid": "0.00",
-    "deficit": "0.00",
+    "deficit": "0.05",
     "halted": false,
     "mode": "paper_only",
     "real_money": false
@@ -39,39 +39,55 @@
       "signal": 1,
       "action": "open",
       "budget": 5.0
+    },
+    {
+      "pair": "SOLEUR",
+      "timestamp": 1795676631,
+      "price": 64.42,
+      "signal": 1,
+      "action": "close",
+      "net": "-0.05",
+      "reason": "scheduled_exit"
     }
   ],
-  "last": 1795653580,
-  "position": {
-    "pair": "SOLEUR",
-    "price": 64.62,
-    "budget": 5.0,
-    "opened": 1795653580
-  },
+  "last": 1795676631,
+  "position": null,
   "observations": {
     "XBTEUR": {
-      "bid": 55277.8,
-      "ask": 55278.5,
-      "score": 0.014274922513488386,
+      "bid": 55155.5,
+      "ask": 55155.6,
+      "score": 0.01619223070973974,
       "signal": 1
     },
     "ETHEUR": {
-      "bid": 1547.53,
-      "ask": 1547.54,
-      "score": 0.014361667360993424,
+      "bid": 1538.01,
+      "ask": 1538.02,
+      "score": 0.011463918389494454,
       "signal": 1
     },
     "SOLEUR": {
-      "bid": 64.61,
-      "ask": 64.62,
-      "score": 0.023928787927129047,
+      "bid": 64.42,
+      "ask": 64.43,
+      "score": 0.018495626087572825,
       "signal": 1
     }
   },
-  "observed_at": 1795653580,
+  "observed_at": 1795676631,
   "limitations": [
     "BTC ETH SOL spot only; observed bid/ask plus assumed 0.3% per side",
     "Single shared capital; one position at a time; strongest positive trend",
     "No actual fills or automatic payouts; closes at next successful observation"
-  ]
+  ],
+  "risk": {
+    "max_position_pct": 2,
+    "daily_loss_cap_eur": 1,
+    "daily_blocked": false,
+    "stop_loss_pct": 25,
+    "stop_loss_observed_only": true
+  },
+  "token_review": {
+    "timestamp": 1795676631,
+    "candidates": [],
+    "approved_orders": 0
+  }
 }
