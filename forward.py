@@ -5,6 +5,7 @@ from decimal import Decimal, ROUND_FLOOR
 from historical_lab import candles
 from directional import adaptive
 from treasury import Treasury
+from guardian import budget as risk_budget, daily_block
 
 PAIRS=("XBTEUR","ETHEUR","SOLEUR")
 COST=.003
@@ -18,10 +19,10 @@ def step(state, stamp, price, signal, pair="XBTEUR"):
         if pos.get("pair","XBTEUR")!=pair: raise ValueError("Position pair mismatch")
         pnl=Decimal(str(pos["budget"]*(price/pos["price"]*(1-COST)/(1+COST)-1))).quantize(Decimal(".01"),rounding=ROUND_FLOOR)
         t.settle(pnl)
-        event.update(action="close",net=str(pnl))
+        event.update(action="close",net=str(pnl),reason="stop_loss" if price/pos["price"]<=.75 else "scheduled_exit")
         pos=None
-    elif signal==1 and not t.halted and t.capital>=Decimal("10") and t.deficit<Decimal("2"):
-        budget=float((t.capital*Decimal(".25")).quantize(Decimal(".01")))
+    elif signal==1 and not t.halted and t.capital>=Decimal("10") and t.deficit<Decimal("2") and not daily_block(state["events"],stamp):
+        budget=float(risk_budget(t.capital))
         pos={"pair":pair,"price":price,"budget":budget,"opened":stamp}
         event.update(action="open",budget=budget)
     state.update(last=stamp,position=pos,treasury=t.snapshot())
@@ -60,6 +61,7 @@ def main():
         pair=max(valid,key=lambda p:valid[p]["score"])
         q=valid[pair]
         step(state,stamp,q["ask"],q["signal"] if len(valid)==len(PAIRS) else 0,pair)
+    state["risk"]={"max_position_pct":2,"daily_loss_cap_eur":1,"daily_blocked":daily_block(state["events"],stamp),"stop_loss_pct":25,"stop_loss_observed_only":True}
     state["observations"]=observations
     state["observed_at"]=stamp
     state["limitations"]=["BTC ETH SOL spot only; observed bid/ask plus assumed 0.3% per side","Single shared capital; one position at a time; strongest positive trend","No actual fills or automatic payouts; closes at next successful observation"]
