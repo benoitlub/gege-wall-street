@@ -5,7 +5,7 @@ from decimal import Decimal, ROUND_FLOOR
 from historical_lab import candles
 from directional import adaptive
 from treasury import Treasury
-from guardian import budget as risk_budget, daily_block
+from guardian import budget as risk_budget, daily_block, token_gate
 
 PAIRS=("XBTEUR","ETHEUR","SOLEUR")
 COST=.003
@@ -62,6 +62,24 @@ def main():
         q=valid[pair]
         step(state,stamp,q["ask"],q["signal"] if len(valid)==len(PAIRS) else 0,pair)
     state["risk"]={"max_position_pct":2,"daily_loss_cap_eur":1,"daily_blocked":daily_block(state["events"],stamp),"stop_loss_pct":25,"stop_loss_observed_only":True}
+    # Join discovery and security evidence by token address; unknown never approves.
+    cohort_path=Path("docs/early_bird.json")
+    security_path=Path("docs/status.json")
+    try:
+        cohort=json.loads(cohort_path.read_text()).get("tokens",{})
+        security=json.loads(security_path.read_text())
+        from datetime import datetime
+        checked=datetime.fromisoformat(security["timestamp"].replace("Z","+00:00")).timestamp()
+        checks={o.get("address"):o for o in security.get("observations",[])}
+        candidates=[]
+        for address,token in cohort.items():
+            samples=token.get("samples",[])
+            if not samples or stamp-samples[-1]["time"]>3600: continue
+            evidence=checks.get(address,{}) if 0<=stamp-checked<=3600 else {}
+            candidates.append({"address":address,"decision":"skip","reason":"Security or AI evidence incomplete" if not token_gate(evidence) else "Token execution simulator not yet connected"})
+        state["token_review"]={"timestamp":stamp,"candidates":candidates,"approved_orders":0}
+    except (OSError,ValueError,KeyError,TypeError):
+        state["token_review"]={"timestamp":stamp,"candidates":[],"approved_orders":0,"reason":"Discovery or security evidence unavailable"}
     state["observations"]=observations
     state["observed_at"]=stamp
     state["limitations"]=["BTC ETH SOL spot only; observed bid/ask plus assumed 0.3% per side","Single shared capital; one position at a time; strongest positive trend","No actual fills or automatic payouts; closes at next successful observation"]
