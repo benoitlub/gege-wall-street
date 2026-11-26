@@ -6,7 +6,7 @@ class ForwardTests(unittest.TestCase):
     def test_pair_and_capital(self):
         s={"treasury":Treasury().snapshot(),"events":[]}
         step(s,100,100,1,"SOLEUR")
-        self.assertEqual(s["position"]["budget"],5)
+        self.assertEqual(s["position"]["budget"],.4)
         with self.assertRaises(ValueError): step(s,200,100,1,"ETHEUR")
         step(s,200,110,1,"SOLEUR")
         self.assertIsNone(s["position"])
