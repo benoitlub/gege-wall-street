@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-26T12:49:56.206370+00:00",
+  "timestamp": "2026-11-27T12:43:06.972995+00:00",
   "mode": "historical_research_only",
   "interval_minutes": 60,
   "assets": {
     "XBTEUR": {
       "candles": 720,
-      "first": 1793102400,
-      "last": 1795690800,
+      "first": 1793188800,
+      "last": 1795777200,
       "spot": {
         "momentum": {
           "initial": 20.0,
-          "final": 18.065483751621546,
-          "net_return": -0.09672581241892275,
-          "max_drawdown": 0.1082767976315987,
-          "executions": 32
+          "final": 18.602253435413473,
+          "net_return": -0.0698873282293263,
+          "max_drawdown": 0.07577844934177314,
+          "executions": 34
         },
         "reversal": {
           "initial": 20.0,
@@ -24,10 +24,10 @@
         },
         "breakout": {
           "initial": 20.0,
-          "final": 18.684411509395858,
-          "net_return": -0.06577942453020713,
-          "max_drawdown": 0.06577942453020713,
-          "executions": 20
+          "final": 18.542062198244377,
+          "net_return": -0.07289689008778111,
+          "max_drawdown": 0.07291008970422186,
+          "executions": 24
         },
         "cash": {
           "initial": 20.0,
@@ -38,18 +38,18 @@
         },
         "buy_hold": {
           "initial": 20.0,
-          "final": 18.59864746042636,
-          "net_return": -0.07006762697868196,
-          "max_drawdown": 0.14405135312611184,
+          "final": 19.07159695022528,
+          "net_return": -0.04642015248873599,
+          "max_drawdown": 0.13615849788363155,
           "executions": 2
         }
       },
       "directional_hypothetical": {
         "adaptive": {
           "initial": 20.0,
-          "final": 17.495956020127768,
-          "net_return": -0.12520219899361162,
-          "max_drawdown": 0.1380023733602065,
+          "final": 17.735269122959565,
+          "net_return": -0.11323654385202175,
+          "max_drawdown": 0.13901473079055926,
           "executions": 26,
           "adverse_bars": 45,
           "liquidated": false,
@@ -63,11 +63,11 @@
         },
         "long": {
           "initial": 20.0,
-          "final": 18.59847984941587,
-          "net_return": -0.07007600752920651,
-          "max_drawdown": 0.14148351748776,
+          "final": 19.07142507699402,
+          "net_return": -0.046428746150298905,
+          "max_drawdown": 0.13356698377455145,
           "executions": 2,
-          "adverse_bars": 116,
+          "adverse_bars": 114,
           "liquidated": false,
           "short_enabled": true,
           "model": "hypothetical_constant_notional_per_bar",
@@ -79,11 +79,11 @@
         },
         "short": {
           "initial": 20.0,
-          "final": 20.525749360995185,
-          "net_return": 0.026287468049759344,
-          "max_drawdown": 0.13806456540530776,
+          "final": 20.023495503949647,
+          "net_return": 0.001174775197482436,
+          "max_drawdown": 0.13806456540530754,
           "executions": 2,
-          "adverse_bars": 100,
+          "adverse_bars": 102,
           "liquidated": false,
           "short_enabled": true,
           "model": "hypothetical_constant_notional_per_bar",
@@ -130,25 +130,25 @@
           },
           {
             "strategy": "breakout",
-            "score": -0.1973382735906214,
-            "net_return": -0.06577942453020713,
-            "max_drawdown": 0.06577942453020713,
-            "executions": 20,
+            "score": -0.21871706949622483,
+            "net_return": -0.07289689008778111,
+            "max_drawdown": 0.07291008970422186,
+            "executions": 24,
             "eligible_for_further_research": false
           },
           {
             "strategy": "momentum",
-            "score": -0.31327940768212015,
-            "net_return": -0.09672581241892275,
-            "max_drawdown": 0.1082767976315987,
-            "executions": 32,
+            "score": -0.22144422691287258,
+            "net_return": -0.0698873282293263,
+            "max_drawdown": 0.07577844934177314,
+            "executions": 34,
             "eligible_for_further_research": false
           },
           {
             "strategy": "buy_hold",
-            "score": -0.35817033323090564,
-            "net_return": -0.07006762697868196,
-            "max_drawdown": 0.14405135312611184,
+            "score": -0.3187371482559991,
+            "net_return": -0.04642015248873599,
+            "max_drawdown": 0.13615849788363155,
             "executions": 2,
             "eligible_for_further_research": false
           }
@@ -174,25 +174,25 @@
           },
           {
             "strategy": "short",
-            "score": -0.24984166276085618,
-            "net_return": 0.026287468049759344,
-            "max_drawdown": 0.13806456540530776,
+            "score": -0.27495435561313264,
+            "net_return": 0.001174775197482436,
+            "max_drawdown": 0.13806456540530754,
             "executions": 2,
             "eligible_for_further_research": false
           },
           {
             "strategy": "long",
-            "score": -0.3530430425047265,
-            "net_return": -0.07007600752920651,
-            "max_drawdown": 0.14148351748776,
+            "score": -0.3135627136994018,
+            "net_return": -0.046428746150298905,
+            "max_drawdown": 0.13356698377455145,
             "executions": 2,
             "eligible_for_further_research": false
           },
           {
             "strategy": "adaptive",
-            "score": -0.4012069457140246,
-            "net_return": -0.12520219899361162,
-            "max_drawdown": 0.1380023733602065,
+            "score": -0.3912660054331403,
+            "net_return": -0.11323654385202175,
+            "max_drawdown": 0.13901473079055926,
             "executions": 26,
             "eligible_for_further_research": false
           }
@@ -209,14 +209,14 @@
     },
     "ETHEUR": {
       "candles": 720,
-      "first": 1793102400,
-      "last": 1795690800,
+      "first": 1793188800,
+      "last": 1795777200,
       "spot": {
         "momentum": {
           "initial": 20.0,
-          "final": 17.526659866588567,
-          "net_return": -0.12366700667057162,
-          "max_drawdown": 0.13500142864603215,
+          "final": 18.060328032697342,
+          "net_return": -0.09698359836513293,
+          "max_drawdown": 0.09898275293698544,
           "executions": 36
         },
         "reversal": {
@@ -228,10 +228,10 @@
         },
         "breakout": {
           "initial": 20.0,
-          "final": 18.65654582386095,
-          "net_return": -0.06717270880695259,
-          "max_drawdown": 0.0705940493383681,
-          "executions": 22
+          "final": 18.29515696990598,
+          "net_return": -0.08524215150470094,
+          "max_drawdown": 0.0887644170357591,
+          "executions": 28
         },
         "cash": {
           "initial": 20.0,
@@ -242,18 +242,18 @@
         },
         "buy_hold": {
           "initial": 20.0,
-          "final": 18.58824984357654,
-          "net_return": -0.07058750782117296,
-          "max_drawdown": 0.14556345632335277,
+          "final": 19.01875987181529,
+          "net_return": -0.049062006409235415,
+          "max_drawdown": 0.13796476378654388,
           "executions": 2
         }
       },
       "directional_hypothetical": {
         "adaptive": {
           "initial": 20.0,
-          "final": 18.40662358039358,
-          "net_return": -0.07966882098032113,
-          "max_drawdown": 0.09422050479283084,
+          "final": 18.579325365246163,
+          "net_return": -0.0710337317376919,
+          "max_drawdown": 0.09422050479283117,
           "executions": 24,
           "adverse_bars": 51,
           "liquidated": false,
@@ -267,11 +267,11 @@
         },
         "long": {
           "initial": 20.0,
-          "final": 18.588082326269397,
-          "net_return": -0.07059588368653014,
-          "max_drawdown": 0.14441960529795017,
+          "final": 19.018588474751763,
+          "net_return": -0.04907057626241185,
+          "max_drawdown": 0.13590871847783248,
           "executions": 2,
-          "adverse_bars": 115,
+          "adverse_bars": 116,
           "liquidated": false,
           "short_enabled": true,
           "model": "hypothetical_constant_notional_per_bar",
@@ -283,11 +283,11 @@
         },
         "short": {
           "initial": 20.0,
-          "final": 20.47037403055621,
-          "net_return": 0.02351870152781066,
-          "max_drawdown": 0.1506526955299844,
+          "final": 20.013669976038706,
+          "net_return": 0.0006834988019353005,
+          "max_drawdown": 0.15065269552998384,
           "executions": 2,
-          "adverse_bars": 101,
+          "adverse_bars": 100,
           "liquidated": false,
           "short_enabled": true,
           "model": "hypothetical_constant_notional_per_bar",
@@ -334,26 +334,26 @@
           },
           {
             "strategy": "breakout",
-            "score": -0.2083608074836888,
-            "net_return": -0.06717270880695259,
-            "max_drawdown": 0.0705940493383681,
-            "executions": 22,
-            "eligible_for_further_research": false
-          },
-          {
-            "strategy": "buy_hold",
-            "score": -0.3617144204678785,
-            "net_return": -0.07058750782117296,
-            "max_drawdown": 0.14556345632335277,
-            "executions": 2,
+            "score": -0.26277098557621914,
+            "net_return": -0.08524215150470094,
+            "max_drawdown": 0.0887644170357591,
+            "executions": 28,
             "eligible_for_further_research": false
           },
           {
             "strategy": "momentum",
-            "score": -0.3936698639626359,
-            "net_return": -0.12366700667057162,
-            "max_drawdown": 0.13500142864603215,
+            "score": -0.2949491042391038,
+            "net_return": -0.09698359836513293,
+            "max_drawdown": 0.09898275293698544,
             "executions": 36,
+            "eligible_for_further_research": false
+          },
+          {
+            "strategy": "buy_hold",
+            "score": -0.32499153398232317,
+            "net_return": -0.049062006409235415,
+            "max_drawdown": 0.13796476378654388,
+            "executions": 2,
             "eligible_for_further_research": false
           }
         ],
@@ -378,25 +378,25 @@
           },
           {
             "strategy": "adaptive",
-            "score": -0.2681098305659828,
-            "net_return": -0.07966882098032113,
-            "max_drawdown": 0.09422050479283084,
+            "score": -0.25947474132335424,
+            "net_return": -0.0710337317376919,
+            "max_drawdown": 0.09422050479283117,
             "executions": 24,
             "eligible_for_further_research": false
           },
           {
             "strategy": "short",
-            "score": -0.2777866895321581,
-            "net_return": 0.02351870152781066,
-            "max_drawdown": 0.1506526955299844,
+            "score": -0.3006218922580324,
+            "net_return": 0.0006834988019353005,
+            "max_drawdown": 0.15065269552998384,
             "executions": 2,
             "eligible_for_further_research": false
           },
           {
             "strategy": "long",
-            "score": -0.3594350942824305,
-            "net_return": -0.07059588368653014,
-            "max_drawdown": 0.14441960529795017,
+            "score": -0.3208880132180768,
+            "net_return": -0.04907057626241185,
+            "max_drawdown": 0.13590871847783248,
             "executions": 2,
             "eligible_for_further_research": false
           }
@@ -413,15 +413,15 @@
     },
     "SOLEUR": {
       "candles": 720,
-      "first": 1793102400,
-      "last": 1795690800,
+      "first": 1793188800,
+      "last": 1795777200,
       "spot": {
         "momentum": {
           "initial": 20.0,
-          "final": 19.037916967273578,
-          "net_return": -0.04810415163632109,
-          "max_drawdown": 0.08781649226125343,
-          "executions": 30
+          "final": 19.010192829631983,
+          "net_return": -0.04949035851840089,
+          "max_drawdown": 0.07759144624551806,
+          "executions": 32
         },
         "reversal": {
           "initial": 20.0,
@@ -432,9 +432,9 @@
         },
         "breakout": {
           "initial": 20.0,
-          "final": 19.235565213138205,
-          "net_return": -0.0382217393430897,
-          "max_drawdown": 0.06934855778988569,
+          "final": 19.693851884707396,
+          "net_return": -0.015307405764630189,
+          "max_drawdown": 0.04381412798780926,
           "executions": 26
         },
         "cash": {
@@ -446,20 +446,20 @@
         },
         "buy_hold": {
           "initial": 20.0,
-          "final": 19.196163051185312,
-          "net_return": -0.04019184744073434,
-          "max_drawdown": 0.12877792378449426,
+          "final": 19.52299894111865,
+          "net_return": -0.0238500529440675,
+          "max_drawdown": 0.12842857142857134,
           "executions": 2
         }
       },
       "directional_hypothetical": {
         "adaptive": {
           "initial": 20.0,
-          "final": 18.352093604411667,
-          "net_return": -0.08239531977941661,
-          "max_drawdown": 0.12135281646492657,
+          "final": 18.697669825398634,
+          "net_return": -0.06511650873006825,
+          "max_drawdown": 0.1213528164649268,
           "executions": 24,
-          "adverse_bars": 66,
+          "adverse_bars": 63,
           "liquidated": false,
           "short_enabled": true,
           "model": "hypothetical_constant_notional_per_bar",
@@ -471,11 +471,11 @@
         },
         "long": {
           "initial": 20.0,
-          "final": 19.195990055364337,
-          "net_return": -0.040200497231783094,
-          "max_drawdown": 0.12877792378449415,
+          "final": 19.522822999852664,
+          "net_return": -0.02385885000736676,
+          "max_drawdown": 0.12842857142857123,
           "executions": 2,
-          "adverse_bars": 119,
+          "adverse_bars": 117,
           "liquidated": false,
           "short_enabled": true,
           "model": "hypothetical_constant_notional_per_bar",
@@ -487,11 +487,11 @@
         },
         "short": {
           "initial": 20.0,
-          "final": 19.782382259630396,
-          "net_return": -0.010880887018480223,
-          "max_drawdown": 0.15890322907084298,
+          "final": 19.46503655398877,
+          "net_return": -0.02674817230056148,
+          "max_drawdown": 0.15890322907084276,
           "executions": 2,
-          "adverse_bars": 97,
+          "adverse_bars": 99,
           "liquidated": false,
           "short_enabled": true,
           "model": "hypothetical_constant_notional_per_bar",
@@ -529,6 +529,14 @@
             "eligible_for_further_research": false
           },
           {
+            "strategy": "breakout",
+            "score": -0.10293566174024871,
+            "net_return": -0.015307405764630189,
+            "max_drawdown": 0.04381412798780926,
+            "executions": 26,
+            "eligible_for_further_research": false
+          },
+          {
             "strategy": "reversal",
             "score": -0.12735713305502605,
             "net_return": -0.030988733367767862,
@@ -537,26 +545,18 @@
             "eligible_for_further_research": false
           },
           {
-            "strategy": "breakout",
-            "score": -0.17691885492286108,
-            "net_return": -0.0382217393430897,
-            "max_drawdown": 0.06934855778988569,
-            "executions": 26,
-            "eligible_for_further_research": false
-          },
-          {
             "strategy": "momentum",
-            "score": -0.22373713615882795,
-            "net_return": -0.04810415163632109,
-            "max_drawdown": 0.08781649226125343,
-            "executions": 30,
+            "score": -0.204673251009437,
+            "net_return": -0.04949035851840089,
+            "max_drawdown": 0.07759144624551806,
+            "executions": 32,
             "eligible_for_further_research": false
           },
           {
             "strategy": "buy_hold",
-            "score": -0.29774769500972287,
-            "net_return": -0.04019184744073434,
-            "max_drawdown": 0.12877792378449426,
+            "score": -0.2807071958012102,
+            "net_return": -0.0238500529440675,
+            "max_drawdown": 0.12842857142857134,
             "executions": 2,
             "eligible_for_further_research": false
           }
@@ -582,25 +582,25 @@
           },
           {
             "strategy": "long",
-            "score": -0.2977563448007714,
-            "net_return": -0.040200497231783094,
-            "max_drawdown": 0.12877792378449415,
+            "score": -0.2807159928645092,
+            "net_return": -0.02385885000736676,
+            "max_drawdown": 0.12842857142857123,
             "executions": 2,
             "eligible_for_further_research": false
           },
           {
             "strategy": "adaptive",
-            "score": -0.32510095270926975,
-            "net_return": -0.08239531977941661,
-            "max_drawdown": 0.12135281646492657,
+            "score": -0.30782214165992183,
+            "net_return": -0.06511650873006825,
+            "max_drawdown": 0.1213528164649268,
             "executions": 24,
             "eligible_for_further_research": false
           },
           {
             "strategy": "short",
-            "score": -0.3286873451601662,
-            "net_return": -0.010880887018480223,
-            "max_drawdown": 0.15890322907084298,
+            "score": -0.344554630442247,
+            "net_return": -0.02674817230056148,
+            "max_drawdown": 0.15890322907084276,
             "executions": 2,
             "eligible_for_further_research": false
           }
